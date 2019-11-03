@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block title %}Datasets tagged {{ this.name }}{% endblock %}
+{% block body %} 
+<h1>Tag: {{ this.name }}</h1>
+<h1>Datasets:</h1>
+<ul>
+  {% for i in this.children %}
+    <li><a href="{{ i | url }}">{{ i.name }}</a></li>
+  {% else %}
+    <li><em>No items.</em></li>
+  {% endfor %}
+</ul>
+{% endblock %}

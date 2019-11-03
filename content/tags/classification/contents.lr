@@ -1,0 +1,5 @@
+name: classification
+---
+_model: tag
+---
+_template: tag.html

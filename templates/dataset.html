@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.name }}{% endblock %}
+{% block body %}
+  <h2>{{ this.name }}</h2>
+  <article>
+  {{ this.description }}
+  </article>
+  <h4>Downloads</h4>
+  <ul>
+    {% for a in this.attachments %}
+    <li><a href="{{a | url}}">{{ a.path.split("/")[-1] }}</a></li>
+    {% endfor %}
+  </ul>
+  <span>License: {{ this.license }}</span>
+  {% if this.tags %}
+  <p>Tags: 
+    {% for t in this.tags -%}
+      <span>
+	      <a href="{{ ('/tags/' ~ t.lower()) | url }}">
+          {{ t }}
+        </a>
+      </span>
+    {% endfor %}
+  </p>
+  {% endif %}
+{% endblock %}

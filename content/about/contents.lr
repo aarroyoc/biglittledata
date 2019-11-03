@@ -1,0 +1,13 @@
+_model: page
+---
+title: About BigLittleData
+---
+body:
+
+This website is a repository of datasets under open licenses, running under [IPFS](https://ipfs.io/). The main objectives are:
+
+* Easy interface to download datasets in different formats
+* Simple webpage to be able to be used anywhere
+* Distributed content using IPFS underlaying.
+
+To add or request datasets, go to: [https://github.com/aarroyoc/biglittledata](https://github.com/aarroyoc/biglittledata)

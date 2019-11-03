@@ -1,0 +1,5 @@
+[project]
+name = biglittledata
+locale = en_US
+url = "https://biglittledata.net"
+url_style = "relative"

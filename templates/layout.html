@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+<title>{% block title %}Welcome{% endblock %} — biglittledata</title>
+<body>
+  <header>
+    <h1><a href="/">BigLittleData</a></h1>
+    <nav>
+      <ul class="nav navbar-nav">
+        {% for href, title in [
+          ['/about', 'About']
+        ] %}
+          <li{% if this.is_child_of(href) %} class="active"{% endif
+            %}><a href="{{ href|url }}">{{ title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  <div class="page">
+    {% block body %}{% endblock %}
+  </div>
+  <footer>
+	  &copy; Copyright 2019 by <a href="http://adrianistan.eu">Adrián Arroyo Calle</a>. All the datasets in this website are under open licenses.
+  </footer>
+</body>

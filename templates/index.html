@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}BigLittleData{% endblock %}
+{% block body %}
+  <h2>Welcome to BigLittleData!</h2>
+  <article>
+	  A curated dataset repository with open licenses for machine learning, big data and statistics.
+  <h3>Datasets</h3>
+  <ul>
+    {% for p in this.children %}
+      {% if p._model == "dataset" %}
+        <li><a href="{{ p | url }}">{{ p.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  </article>
+{% endblock %}
