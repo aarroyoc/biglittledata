@@ -1,0 +1,11 @@
+name: ALL-AML Leukemia
+---
+attributes: 7130
+---
+description: This dataset contains genetic expression arrays, enabling us to predict which kind of Leukemia has a person based on its genetic activity (ALL or AML) and also which genes are more important.
+---
+instances: 72
+---
+license: Public Domain
+---
+tags: classification, genetic

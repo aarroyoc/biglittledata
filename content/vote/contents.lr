@@ -1,0 +1,11 @@
+name: Vote
+---
+attributes: 16
+---
+description: 1984 United Stated Congressional Voting Records; Classify as Republican or Democrat
+---
+instances: 435
+---
+license: Public Domain
+---
+tags: classification

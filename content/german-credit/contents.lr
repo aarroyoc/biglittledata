@@ -1,0 +1,11 @@
+name: German Credit
+---
+attributes: 21
+---
+description: German Credit data
+---
+instances: 1000
+---
+license: Public Domain
+---
+tags: classification

@@ -1,0 +1,15 @@
+name: Labor
+---
+attributes: 16
+---
+description:
+
+Final settlements in labor negotitions in Canadian industry. 
+
+Testing concept learning software, in particular an experimental method to learn two-tiered concept descriptions. The data was used to learn the description of an acceptable and unacceptable contract. The unacceptable contracts were either obtained by interviewing experts, or by inventing near misses.
+---
+instances: 57
+---
+license: Public Domain
+---
+tags: classification

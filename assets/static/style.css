@@ -41,3 +41,11 @@ header nav ul li {
 div.page {
     background: #f1fbfe;
 }
+
+div.databox {
+    display: flex;
+    flex-direction: row;
+}
+div.databox > span {
+    flex: 1;
+}

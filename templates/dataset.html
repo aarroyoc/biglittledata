@@ -2,6 +2,8 @@
 {% block title %}{{ this.name }}{% endblock %}
 {% block body %}
   <h2>{{ this.name }}</h2>
+  <div class="databox"><span>Instances: {{ this.instances }}</span><span>Attributes: {{ this.attributes }}</span></div>
+  <hr>
   <article>
   {{ this.description }}
   </article>

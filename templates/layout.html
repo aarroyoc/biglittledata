@@ -4,7 +4,7 @@
 <title>{% block title %}Welcome{% endblock %} — biglittledata</title>
 <body>
   <header>
-    <h1><a href="/">BigLittleData</a></h1>
+    <h1><a href="{{ "/" | url }}">BigLittleData</a></h1>
     <nav>
       <ul class="nav navbar-nav">
         {% for href, title in [
