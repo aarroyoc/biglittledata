@@ -1,0 +1,15 @@
+name: Travel Survey
+---
+attributes: 12
+---
+description:
+
+Travel Survey contains the result of a survey about travel made at Valladolid University. The questions, in Spanish, are all about the habits of travelers on their last travel.
+
+This dataset was made by [Adrián Arroyo](http://adrianistan.eu), Pablo Valdunciel, Duero Cuadrilleo and Héctor Sáenz.
+---
+instances: 217
+---
+license: Public Domain
+---
+tags: spanish, survey

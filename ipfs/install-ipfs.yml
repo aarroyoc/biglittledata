@@ -1,0 +1,38 @@
+- hosts: all
+  remote_user: pi
+  become_method: sudo
+  name: "Install IPFS"
+  tasks:
+  - name: Download IPFS
+    get_url:
+      url: "https://dist.ipfs.io/go-ipfs/v0.4.22/go-ipfs_v0.4.22_linux-arm.tar.gz"
+      dest: /home/pi/ipfs.tar.gz
+  - name: Extract IPFS
+    unarchive:
+      src: /home/pi/ipfs.tar.gz
+      dest: /home/pi
+      remote_src: yes
+  - name: Copy IPFS
+    command: cp /home/pi/go-ipfs/ipfs /usr/local/bin/ipfs
+    become: yes
+  - name: Check status
+    stat:
+      path: /root/.ipfs
+    register: ipfs_folder
+    become: yes
+  - name: Init IPFS
+    command: ipfs init
+    become: yes
+    when: not ipfs_folder.stat.exists
+  - name: Copy IPFS systemd
+    copy:
+      src: ipfs.service
+      dest: /etc/systemd/system/ipfs.service
+    become: yes
+  - name: Start IPFS daemon
+    systemd:
+      daemon_reload: yes
+      enabled: yes
+      name: ipfs
+      state: restarted
+    become: yes

@@ -1,0 +1,16 @@
+- hosts: all
+  become_method: sudo
+  remote_user: pi
+  name: Add files to IPFS
+  vars_prompt:
+  - name: ipfs
+    prompt: Put here the IPFS hash to pin
+    private: no
+  tasks:
+  - name: Download files
+    command: "ipfs get /ipfs/{{ ipfs }}"
+    become: yes
+  - name: Pin files
+    command: "ipfs pin add /ipfs/{{ ipfs }}"
+    become: yes
+
